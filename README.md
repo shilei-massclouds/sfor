@@ -1,2 +1,2 @@
 # sfor
-Simplest framework of Rust STD library experiment
+Simplest framework of Rust STD library experiment.
