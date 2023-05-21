@@ -1,9 +1,11 @@
 #![no_std]
+#![no_main]
 
 extern "Rust" {
     fn libos_puts(msg: &str);
 }
 
+#[allow(dead_code)]
 fn main() {
     unsafe {
         libos_puts("Hello, LibOS!\n");

@@ -10,3 +10,9 @@ name = "os"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[target.'cfg(target_arch = "x86_64")'.dependencies]
+x86 = "0.52"
+x86_64 = "0.14"
+x2apic = "0.4"
+raw-cpuid = "10.7"
