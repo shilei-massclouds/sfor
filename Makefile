@@ -49,7 +49,7 @@ $(APP_TARGET_DIR)/$(APP): $(OUT_DIR)/$(LIBOS).a
 $(OUT_DIR)/$(LIBOS).a: $(LIBOS_TARGET_DIR)/$(LIBOS).a
 	@printf "make $@\n"
 	cp $^ $@
-	cp ./libarceos.redefine-syms.template $(OUT_DIR)/libarceos.redefine-syms
+	cp ./$(LIBOS)/libarceos.redefine-syms.template $(OUT_DIR)/libarceos.redefine-syms
 	nm --defined-only --print-file-name $(DIST_ARCHIVE) 2>/dev/null | \
 		grep "^$(DIST_ARCHIVE):arceos-" | cut -d ' ' -f 3 | \
 		grep "^arceos_" | xargs -Isymbol echo 'libarceos_symbol' \

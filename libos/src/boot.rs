@@ -6,7 +6,7 @@ pub const PHYS_VIRT_OFFSET: usize = 0xffff_ff80_0000_0000;
 pub const TASK_STACK_SIZE: usize = 0x40000;
 
 /// This should be in EAX.
-//pub(super) const MULTIBOOT_BOOTLOADER_MAGIC: usize = 0x2BADB002;
+pub(super) const MULTIBOOT_BOOTLOADER_MAGIC: usize = 0x2BADB002;
 
 use x86_64::registers::control::{Cr0Flags, Cr4Flags};
 use x86_64::registers::model_specific::EferFlags;
